@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Macbook (){
+      this.cost = function(){
+        return 1000;
+      }
+    }  
+    function Memory(macbook){
+      this.cost = function(){
+        return macbook.cost() + 75;
+      }
+    }
+    let myMacbook = new Memory(new Macbook());
+    console.info(myMacbook.cost());
+    let myMacbook1 = new Macbook();
+    console.info(myMacbook1.cost());
+    
+  </script>
+</body>
+</html>
